@@ -305,7 +305,8 @@ st.markdown("""
 st.markdown("""
 <div class="roadmap-step">
     <div class="phase-title">PHASE 2 : L'Éveil Social (Le "Stade du Miroir")</div>
-    <div class="phase-status status-future">Q3 - Q4 2026</div>
+    <div class="phase-status status-active">EN DÉVELOPPEMENT</div>
+    <div class="phase-status status-future">Q1 - Q2 2026</div>
     <div class="glass-card" style="opacity: 0.8;">
         <p>L'intelligence ne se développe que par friction avec l'Autre. Nous sortons l'IA de son bocal.</p>
         <ul>
@@ -375,6 +376,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
