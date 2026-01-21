@@ -126,17 +126,12 @@ st.markdown("""
 # ==============================================================================
 # 3. SECTION HERO (ACCUEIL)
 # ==============================================================================
-
-col1, col2 = st.columns([1, 1])
-# ==============================================================================
-# 3. SECTION HERO (ACCUEIL)
-# ==============================================================================
 st.markdown('<br>', unsafe_allow_html=True)
 
 # --- LIGNE D'EN-TÊTE (TITRE GAUCHE / LOGO DROITE) ---
 # On crée deux colonnes avec un grand écart.
 # [4, 1] signifie : la colonne gauche prend 80% de la largeur, la droite 20%.
-header_col1, header_col2 = st.columns([4, 1])
+header_col1, header_col2 = st.columns([3, 2])
 
 with header_col1:
     # Le Titre à gauche
@@ -396,6 +391,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
