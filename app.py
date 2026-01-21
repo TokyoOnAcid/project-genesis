@@ -142,7 +142,7 @@ with header_col2:
     # L'image se calera automatiquement dans la colonne de droite (donc à droite de l'écran)
     try:
         # Ajuste 'width' selon la taille réelle de ton logo (ex: 150 ou 200)
-        st.image("logo_genesis.png", width=500) 
+        st.image("logo_genesis.png", width=2000) 
     except:
         st.warning("Logo manquant")
 
@@ -391,6 +391,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
