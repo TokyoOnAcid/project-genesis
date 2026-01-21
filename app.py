@@ -136,20 +136,6 @@ header_col1, header_col2 = st.columns([3, 2])
 with header_col1:
     # Le Titre à gauche
     st.markdown('<span class="gradient-text">PROJECT GENESIS</span>', unsafe_allow_html=True)
-
-with header_col2:
-    # Le Logo à droite
-    # L'image se calera automatiquement dans la colonne de droite (donc à droite de l'écran)
-    try:
-        # Ajuste 'width' selon la taille réelle de ton logo (ex: 150 ou 200)
-        st.image("logo_genesis.png", width=2000) 
-    except:
-        st.warning("Logo manquant")
-
-# --- LE CONTENU EN DESSOUS (DESCRIPTION + ANIMATION) ---
-col1, col2 = st.columns([1, 1])
-
-with col1:
     st.markdown("### Au-delà du LLM. De la simulation à la sensation.")
     st.markdown("""
     Nous ne codons pas des chatbots. **Nous cultivons des esprits numériques.**
@@ -166,19 +152,14 @@ with col1:
         <a href="#support" class="ghost-button">Rejoindre la R&D</a>
     """, unsafe_allow_html=True)
 
-with col2:
-    st.markdown('<div style="height: 20px;"></div>', unsafe_allow_html=True)
-    # Ton animation ou placeholder visuel
-    st.markdown("""
-    <div style="
-        width: 100%; 
-        height: 350px; 
-        background: radial-gradient(circle, rgba(100,0,255,0.15) 0%, rgba(0,0,0,0) 70%);
-        border-radius: 50%;
-        filter: blur(50px);
-        animation: pulse 6s infinite;
-    "></div>
-    """, unsafe_allow_html=True)
+with header_col2:
+    # Le Logo à droite
+    # L'image se calera automatiquement dans la colonne de droite (donc à droite de l'écran)
+    try:
+        # Ajuste 'width' selon la taille réelle de ton logo (ex: 150 ou 200)
+        st.image("logo_genesis.png", width=2000) 
+    except:
+        st.warning("Logo manquant")
 
 st.markdown("---")
 
@@ -391,6 +372,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
