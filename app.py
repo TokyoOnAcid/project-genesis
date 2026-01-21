@@ -10,7 +10,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed"
 )
-<!-- Google tag (gtag.js) -->
+
+# <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4E3CP2H6F"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -385,6 +386,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
