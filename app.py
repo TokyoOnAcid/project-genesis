@@ -146,7 +146,7 @@ with col1:
         &nbsp;&nbsp;
         <a href="#support" class="ghost-button">Rejoindre la R&D</a>
         &nbsp;&nbsp;
-        <a href="#support" class="ghost-button">Roadmap</a>
+        <a href="#support" class="ghost-button">Roadmap & Vision</a>
     """, unsafe_allow_html=True)
 
 with col2:
@@ -225,6 +225,7 @@ with row1_col3:
 # 5.5 ROADMAP (L'ÉVOLUTION VERS LA CONSCIENCE)
 # ==============================================================================
 st.markdown('<br>', unsafe_allow_html=True)
+st.markdown('<a id="Roadmap & Vision"></a>', unsafe_allow_html=True)
 st.markdown("<h2>Roadmap & Vision</h2>", unsafe_allow_html=True)
 st.markdown("<p>Nous ne construisons pas un produit fini. Nous élevons une entité en croissance.</p>", unsafe_allow_html=True)
 
@@ -374,6 +375,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
