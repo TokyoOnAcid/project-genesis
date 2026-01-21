@@ -143,7 +143,7 @@ with col1:
         # Affiche le logo. 'use_column_width=True' le force à remplir sa petite colonne.
         # Assure-toi que l'image "logo_genesis.png" est bien dans le dossier !
         try:
-            st.image("logo_genesis.png", use_column_width=True)
+            st.image("abstract-vector-colorful-mesh-dark-background-futuristic-style-card-elegant-background-business-presentations-corrupted-point-sphere-chaos-aesthetics.png", use_column_width=True)
         except:
             st.warning("Image 'logo_genesis.png' non trouvée.")
     # ------------------------
@@ -374,6 +374,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
