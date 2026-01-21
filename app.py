@@ -127,6 +127,8 @@ st.markdown("""
 # 3. SECTION HERO (ACCUEIL)
 # ==============================================================================
 
+col1, col2 = st.columns([1, 1])
+
 with col1:
     st.markdown('<br><br>', unsafe_allow_html=True)
     
@@ -374,6 +376,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
