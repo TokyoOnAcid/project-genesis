@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+import streamlit.components.v1 as components
 
 # ==============================================================================
 # 1. CONFIGURATION DE LA PAGE
@@ -11,7 +12,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# <!-- Google tag (gtag.js) -->
+ga_js = """
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4E3CP2H6F"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -20,6 +21,11 @@ st.set_page_config(
 
   gtag('config', 'G-P4E3CP2H6F');
 </script>
+"""
+
+# On injecte le code dans la page. 
+# height=0 permet de le rendre invisible visuellement.
+components.html(ga_js, height=0)
 
 # ==============================================================================
 # 2. LE STYLE CSS (L'âme du design "SoundWave")
@@ -386,6 +392,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
