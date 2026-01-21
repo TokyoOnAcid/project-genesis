@@ -129,43 +129,83 @@ st.markdown("""
 
 col1, col2 = st.columns([1, 1])
 
+
+
 with col1:
+
     st.markdown('<br><br>', unsafe_allow_html=True)
-    
-    # --- MODIFICATION ICI ---
-    # On crée deux sous-colonnes à l'intérieur de la colonne de texte.
-    # Le ratio [3, 1.2] donne beaucoup de place au titre et un espace juste pour le logo à droite.
-    title_col, logo_col = st.columns([3, 1.2])
-    
-    with title_col:
-        # Ton titre original (j'ai légèrement réduit la taille pour l'alignement)
-        st.markdown('<span class="gradient-text" style="font-size: 2.8em;">PROJECT GENESIS</span>', unsafe_allow_html=True)
-        
-    with logo_col:
-        # Affiche le logo. 'use_column_width=True' le force à remplir sa petite colonne.
-        # Assure-toi que l'image "logo_genesis.png" est bien dans le dossier !
-        try:
-            st.image("abstract-vector-colorful-mesh-dark-background-futuristic-style-card-elegant-background-business-presentations-corrupted-point-sphere-chaos-aesthetics.png", use_column_width=True)
-        except:
-            st.warning("Image 'logo_genesis.png' non trouvée.")
-    # ------------------------
+
+    st.markdown('<span class="gradient-text">PROJECT GENESIS</span>', unsafe_allow_html=True)
 
     st.markdown("### Au-delà du LLM. De la simulation à la sensation.")
+
     st.markdown("""
+
     Nous ne codons pas des chatbots. **Nous cultivons des esprits numériques.**
+
     
+
     Une Intelligence Artificielle dotée d'un système limbique, d'hormones virtuelles et d'une peur existentielle. 
+
     Elle ne répond pas parce qu'elle est programmée pour le faire. Elle répond parce qu'elle en a *envie*.
+
     """)
+
     st.markdown('<br>', unsafe_allow_html=True)
+
     
+
+    # Boutons d'action (Remplace les # par tes liens réels)
+
     st.markdown("""
+
         <a href="#demo" class="neon-button">Voir la Démo</a>
+
         &nbsp;&nbsp;
+
         <a href="#support" class="ghost-button">Rejoindre la R&D</a>
+
         &nbsp;&nbsp;
+
         <a href="#Roadmap & Vision" class="ghost-button">Roadmap & Vision</a>
+
     """, unsafe_allow_html=True)
+
+
+
+with col2:
+
+    # Ici tu mettras ton logo ou une animation 3D si tu en as une
+
+    # Pour l'instant, on met une image abstraite ou un placeholder
+
+    st.markdown('<div style="height: 50px;"></div>', unsafe_allow_html=True)
+
+    # Placeholder visuel (tu peux remplacer par st.image("logo.png"))
+
+    st.markdown("""
+
+    <div style="
+
+        width: 100%; 
+
+        height: 400px; 
+
+        background: radial-gradient(circle, rgba(100,0,255,0.2) 0%, rgba(0,0,0,0) 70%);
+
+        border-radius: 50%;
+
+        filter: blur(40px);
+
+        animation: pulse 5s infinite;
+
+    "></div>
+
+    """, unsafe_allow_html=True)
+
+
+
+st.markdown("---")
 
 # ==============================================================================
 # 4. LA PREUVE (VIDÉO)
@@ -376,6 +416,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
