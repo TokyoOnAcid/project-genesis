@@ -169,7 +169,7 @@ st.markdown("---")
 # 4. LA PREUVE (VIDÉO)
 # ==============================================================================
 st.markdown('<a id="demo"></a>', unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center;'>Première IA (bientôt disponible) doté d'une structure BICA (Biologically Inspired Cognitive Architecture)</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>Première IA doté d'une structure BICA (Biologically Inspired Cognitive Architecture)</h2>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Regardez le Cortisol monter en temps réel. Ce n'est pas scripté.</p>", unsafe_allow_html=True)
 
 # Container centré pour la vidéo
@@ -372,4 +372,5 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
