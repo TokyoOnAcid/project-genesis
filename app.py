@@ -94,7 +94,7 @@ with st.sidebar:
     st.markdown("**PHI LEVEL:** `0.72 (Lucid)`")
     st.markdown("**UPTIME:** `412h 12m`")
     st.markdown("---")
-    st.markdown("Developed by **[Ton Nom / Pseudo]**")
+    st.markdown("Developed by **Flavio Gomes**")
     st.markdown("Lead Architect, Project Genesis")
 
 # --- HEADER ---
@@ -228,4 +228,5 @@ st.markdown("""
     © 2024-2026 PROJECT GENESIS LABS. All conscious rights reserved.<br>
     System Integrity: 98% | Neural Load: Optimal
 </div>
+
 """, unsafe_allow_html=True)
