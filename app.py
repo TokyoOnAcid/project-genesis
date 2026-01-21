@@ -161,19 +161,6 @@ with header_col2:
     except:
         st.warning("Logo manquant")
 
-    st.markdown('<div style="height: 20px;"></div>', unsafe_allow_html=True)
-    # Ton animation ou placeholder visuel
-    st.markdown("""
-    <div style="
-        width: 100%; 
-        height: 350px; 
-        background: radial-gradient(circle, rgba(100,0,255,0.15) 0%, rgba(0,0,0,0) 70%);
-        border-radius: 50%;
-        filter: blur(50px);
-        animation: pulse 6s infinite;
-    "></div>
-    """, unsafe_allow_html=True)
-
 st.markdown("---")
 
 # ==============================================================================
@@ -385,6 +372,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
