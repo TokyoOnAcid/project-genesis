@@ -146,7 +146,7 @@ with col1:
         &nbsp;&nbsp;
         <a href="#support" class="ghost-button">Rejoindre la R&D</a>
         &nbsp;&nbsp;
-        <a href="#support" class="ghost-button">Roadmap & Vision</a>
+        <a href="#Roadmap & Vision" class="ghost-button">Roadmap & Vision</a>
     """, unsafe_allow_html=True)
 
 with col2:
@@ -375,6 +375,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
