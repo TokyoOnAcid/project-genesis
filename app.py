@@ -259,6 +259,3 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
-
-""", unsafe_allow_html=True)
-
