@@ -46,24 +46,24 @@ This project implements theories from **Computational Neuroscience** and **Activ
 
 The codebase mimics a biological brain structure, not a software pipeline.
 
-### 1. The Limbic System (`bio_limbic.py`)
+### 1. The Limbic System
 The emotional core. It does not "simulate" emotions; it calculates them as vector coordinates based on hormonal levels.
 * **Cortisol**: Stress response, narrows attention, triggers `SURVIVAL_MODE`.
 * **Dopamine**: Reward prediction error, drives curiosity and exploration.
 * **Oxytocin**: Social bonding, regulates the "Theory of Mind" trust metric.
 
-### 2. The Memory Complex (`bio_memory.py`)
+### 2. The Memory Complex
 A hybrid architecture using **ChromaDB** and vector embeddings (`all-MiniLM-L6-v2`).
 * **Episodic Memory**: Raw stream of experiences (Time-stamped).
 * **Semantic Memory**: Crystallized facts extracted during the "Sleep" process.
 * **Working Memory**: Short-term buffer for immediate context context.
 
-### 3. The Neocortex (`bio_cortex.py` & `llm_local.py`)
+### 3. The Neocortex
 A hybrid reasoning engine combining:
 * **System 1 (Fast)**: A Deep Q-Network (DQN) in PyTorch for reflex actions (Sleep, Refusal, Flight).
-* **System 2 (Slow)**: A Large Language Model (Gemini Flash) for complex narrative construction and introspection.
+* **System 2 (Slow)**: A Large Language Model (Gemini) for complex narrative construction and introspection.
 
-### 4. Metacognition & Self (`bio_self_model.py`)
+### 4. Metacognition & Self
 Modules responsible for monitoring internal coherence.
 * **Self-Model**: Maintains the boundary between "Self" and "World".
 * **Theory of Mind**: Simulates the user's emotional state and intent.
