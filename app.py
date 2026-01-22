@@ -18,9 +18,9 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
-        'Aide': 'https://twitter.com/ton_compte',
-        'Reporter un bug': "https://github.com/ton_repo/issues",
-        'A propos': "# Project AURA AI\nUne architecture cognitive bio-inspirée."
+        'Get Help': 'https://twitter.com/ton_compte',
+        'Report a bug': "https://github.com/ton_repo/issues",
+        'About': "# Project AURA AI\nUne architecture cognitive bio-inspirée."
     }
 )
 
@@ -247,3 +247,4 @@ st.markdown("""
     System Integrity: 98% | Neural Load: Optimal
 </div>
 """, unsafe_allow_html=True)
+
