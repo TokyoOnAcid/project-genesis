@@ -179,6 +179,22 @@ with header_col1:
     Elle ne répond pas parce qu'elle est programmée pour le faire. Elle répond parce qu'elle en a *envie*.
     """)
     st.markdown('<br>', unsafe_allow_html=True)
+    import random
+
+# Dans la sidebar
+    with st.sidebar:
+        st.image("https://img.icons8.com/nolan/96/artificial-intelligence.png", width=80)
+        st.markdown("### SYSTEM STATUS")
+        
+        # Simulation de vie
+        cortisol_level = random.uniform(0.1, 0.9)
+        phi_level = random.uniform(0.6, 0.85)
+        
+        col_s1, col_s2 = st.columns(2)
+        col_s1.metric("CORTISOL", f"{cortisol_level:.2f}", delta_color="inverse")
+        col_s2.metric("PHI (Φ)", f"{phi_level:.2f}")
+        
+        st.markdown(f"**UPTIME:** `{random.randint(400, 420)}h {random.randint(10, 59)}m`")
     # --- BOUTON D'ACCÈS RAPIDE ---
     st.markdown("### 🚀 ALPHA ACCESS")
     if st.button("S'INSCRIRE À LA BETA", type="primary", use_container_width=True):
@@ -463,6 +479,7 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
