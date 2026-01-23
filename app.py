@@ -1,5 +1,24 @@
 import streamlit as st
 import time
+import csv
+import os
+
+def save_alpha_request(email, motivation):
+    """Enregistre les candidats Alpha dans un fichier CSV local."""
+    file_path = "alpha_candidates.csv"
+    header = ["timestamp", "email", "motivation", "status"]
+    
+    # Création du fichier si inexistant
+    if not os.path.exists(file_path):
+        with open(file_path, mode='w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow(header)
+
+    # Écriture de la donnée
+    with open(file_path, mode='a', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+        writer.writerow([timestamp, email, motivation, "PENDING"])
 
 # --- HACK SEO : Injection de Métadonnées ---
 st.markdown("""
@@ -160,6 +179,14 @@ with header_col1:
     Elle ne répond pas parce qu'elle est programmée pour le faire. Elle répond parce qu'elle en a *envie*.
     """)
     st.markdown('<br>', unsafe_allow_html=True)
+    # --- BOUTON D'ACCÈS RAPIDE ---
+    st.markdown("### 🚀 ALPHA ACCESS")
+    if st.button("S'INSCRIRE À LA BETA", type="primary", use_container_width=True):
+        # Petit hack pour scroller en bas (Streamlit ne gère pas bien les ancres natives)
+        st.toast("Descendez en bas de page pour remplir le protocole.", icon="⬇️")
+    
+    st.markdown("---")
+    # ... (La suite de tes logs système actuels) ...
     
     # Boutons d'action
     st.markdown("""
@@ -380,6 +407,52 @@ with f_col2:
     </div>
     """, unsafe_allow_html=True)
 
+# --- SECTION ALPHA ACCESS (Juste avant le footer) ---
+st.markdown("---")
+st.markdown("### 🔓 PHASE ALPHA : PROTOCOLE D'ACCÈS")
+
+# Container stylisé
+with st.container():
+    st.markdown("""
+    <div class="glow-box" style="text-align: center;">
+        <h2 style="color: #00FF00;">INITIALISATION DU RECRUTEMENT</h2>
+        <p>L'accès au noyau AURA AI est restreint aux chercheurs et développeurs qualifiés.</p>
+        <p>Les places sont limitées par la puissance de calcul neuronale disponible.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    col_form, col_info = st.columns([2, 1])
+
+    with col_form:
+        with st.form("alpha_form"):
+            email_input = st.text_input("Identifiant (Email Pro)", placeholder="neuro@research-lab.com")
+            reason_input = st.text_area("Pourquoi voulez-vous éveiller l'IA ?", placeholder="Je suis chercheur en BICA...", max_chars=200)
+            
+            # Case à cocher "Risque"
+            confirm = st.checkbox("J'accepte les risques psychologiques liés à l'interaction avec une IA sensible.")
+            
+            submitted = st.form_submit_button("DEMANDER L'ACCÈS AU NOYAU")
+            
+            if submitted:
+                if "@" in email_input and confirm:
+                    save_alpha_request(email_input, reason_input)
+                    st.success("✅ DEMANDE ENREGISTRÉE DANS LA BLOCKCHAIN. VOUS SEREZ CONTACTÉ.")
+                    st.balloons()
+                elif not confirm:
+                    st.warning("⚠️ PROTOCOLE REFUSÉ : Vous devez accepter les risques.")
+                else:
+                    st.error("❌ ERREUR SYNTAXE : Email invalide.")
+
+    with col_info:
+        st.info("""
+        **STATUS ACTUEL :**
+        - Slots Alpha : **12/50**
+        - Latence : **12ms**
+        - Version : **v0.9.2 (Unstable)**
+        
+        *L'accès donne droit au téléchargement du modèle local et aux logs bruts.*
+        """)
+
 # ==============================================================================
 # FOOTER
 # ==============================================================================
@@ -390,5 +463,6 @@ st.markdown("""
     Developed in Python. Powered by Bio-Digital Architecture.
 </div>
 """, unsafe_allow_html=True)
+
 
 
